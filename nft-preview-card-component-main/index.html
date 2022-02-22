@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{box-sizing: border-box; margin: 0; padding: 0;}
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;700&display=swap');
+    /*font-family: 'Outfit', sans-serif;*/
+    /*FIRST MOBILEFIRST*/
+    /*Error mio XD la clase flex__container no hace referencia a su nombre en realidad no use display flex para hacer esa parte, y cambiar el nombre de las clases hace que se rompa*/
+    @media (max-width: 1440px) {
+      .body {background-color: hsl(217, 54%, 11%);}
+
+      .flex__container {width: 25%; background-color: hsl(216, 50%, 16%); margin: 10px auto; border-radius: 15px; box-shadow: 10px 15px 1px 3px #0B172B, -10px 15px 2px 3px #0B172B, 1px 1px 3px 0 #0A192E;}
+
+      .flex__img {width: 95%; height: 40%; object-fit: cover; margin: auto; border-radius: 25px; display: block; padding: 15px;}
+
+      .flex2__img {width: 16px; margin-right: 3px; height: 17px; padding-bottom: 2px;}
+
+      .diamond__img {width: 10px; height: 18px;}
+
+      .flex__h1{font-family: 'Outfit', sans-serif; color: hsl(0, 0%, 100%); font-size: 18px; font-weight: 600px; margin-left: 23px;}
+
+      .flex__p{font-size: 14px; font-family: 'Outfit', sans-serif; color: #5A6F8E; margin: 0px 23px; font-weight: lighter; line-height: 1.5; padding: 14px 0px 14px;}
+
+      .flex__h2 {color: hsl(178, 100%, 50%); font-size: 15px; font-weight: 400px; font-family: 'Outfit', sans-serif;}
+
+      .white {color: hsl(215, 51%, 70%); font-size: 13px; font-family: 'Outfit', sans-serif; font-weight: lighter; margin: ;}
+
+      .flex__white {display: flex; margin: 0px 0px 0px auto;}
+
+      .flex__container2 {display: flex; flex-wrap: wrap; margin: 10px 23px;}
+
+      .div__author {border-top: solid hsl(215, 32%, 27%) 2px; width: 100%; margin-top: 10px; position: relative;}
+
+      .flex__h3 {font-size: 13px; margin: 0px 10px; display: inline-block; color: hsl(178, 100%, 50%); font-family: 'Outfit', sans-serif;; font-weight: lighter; position: absolute; top: 20px}
+
+      .span__author:hover {color: #fff; transition: .5s;}
+
+      .img__author {width: 30px; height: 30px; margin: 10px 0px; border: solid #fff 1px; border-radius: 100%;}
+
+    }
+    @media (max-width: 376px){
+     .body{background-color: hsl(217, 54%, 11%)
+    ;}
+    .flex__container{width: 50%; margin: 20px auto; background-color: hsl(216, 50%, 16%); border-radius: 8px; box-shadow: 10px 15px 1px 3px #0B172B, -10px 15px 2px 3px #0B172B, 1px 1px 3px 0 #0A192E;;}
+
+    .flex__img{width: 100%; height: 75%; object-fit: cover;}
+
+    .flex__h1{font-family: 'Outfit', sans-serif; color: hsl(0, 0%, 100%); font-size: 14px; margin-left: 15px;}
+
+    .flex__p{font-size: 9px; font-family: 'Outfit', sans-serif; color: #5A6F8E;font-weight: lighter; line-height: 1.8; padding: 10px 0px; margin-left: 13px;}
+
+    .flex__container2{ display: flex; flex-wrap: wrap; margin: 0px 15px;}
+
+    .flex2__img{width: 8px; margin-right: 3px; height: 14px; padding-bottom: 5px;}  
+
+    .flex__h2{color: hsl(178, 100%, 50%); font-size: 10px; font-weight: 400px; font-family: 'Outfit', sans-serif; margin-right: auto;}
+
+    .flex__h2:hover{color: #fff; transition: .5s;}
+
+    .diamond__img{width: 6px; height: 12px; padding: 0;}
+
+    .white{color: hsl(215, 51%, 70%); font-size: 9px; font-family: 'Outfit', sans-serif; font-weight: lighter; margin-right: 0px;}
+
+    .flex__h3{font-size: 18px; margin: 0px 8px; display: inline-block; font-size: 7px; color: hsl(178, 100%, 50%); font-family: 'Outfit', sans-serif;; font-weight: lighter; position: absolute; top: 18px}
+
+    .img__author{width: 20px; height: 20px; margin: 10px 0px; border: solid #fff 1px; border-radius: 100%;} 
+
+    .div__author{border-top: solid hsl(215, 32%, 27%) 1px; width: 100%; margin-top: 10px; position: relative;}
+
+    .span__author:hover {color: #fff; transition: .5s;}
+
+
+  </style>
+</head>
+<body class="body">
+  <div class="flex__container">
+    <img src="images/image-equilibrium.jpg" alt="" class="flex__img">
+  <h1 class="flex__h1">Equilibrium #3429</h1>
+
+  <p class="flex__p">Our Equilibrium collection promotes balance and calm.</p>
+
+  <div class="flex__container2">
+    <img src="images/icon-ethereum.svg" alt="" class="flex2__img diamond__img">
+  <h2 class="flex__h2">0.041 ETH</h2>
+  <div class="flex__white">
+  <img src="images/icon-clock.svg" alt="" class="flex2__img">
+  <h2 class="flex__h2 white">3 days left</h2></div>
+  <div class="div__author">
+    <img src="images/image-avatar.png" alt="" class="img__author">
+  <h3 class="flex__h3">Creation of <span class="span__author">Jules Wyvern</span></h3>
+  </div>
+  </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/4ll3nd" target="_blank">Allend</a>.
+  </div>
+</body>
+</html>
