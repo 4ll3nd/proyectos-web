@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>GVM</title>
+</head>
+<body>
+    <div class="conteiner">
+    <h1 id="title">GAMES VIDEOS AND MEMES</h1>
+    <p id="description">"Pagina hecha para entretener"</p>
+    <!--INICIO DEL FORM-->
+    <form action="" id="survey-form">
+        <div class="form-group">
+            <label for="name" id="name-label">Nombre Completo</label>
+        </div>
+        <div class="form-group">
+            <input type="text" id="name" placeholder="Nombre" required>
+        </div>
+            <label for="email" id="email-label">Correo Electronico</label>
+        <div class="form-group">
+            <input type="email" id="email" placeholder="Email" required>
+        </div>
+        <label for="number" id="number-label">Edad</label>
+        <div class="form-group">
+            <input type="number" id="number" min="10" max="90" placeholder="Age">
+        </div>
+        <div class="form-group">
+            <p class="p-select">Elige tu contenido favorito</p>
+            <select name="choose" id="dropdown" class="dropdown">
+                <option value="games">Juegos</option>
+                <option value="videos">Videos</option>
+                <option value="forum">Foro</option>
+                <option value="workshop">Workshop</option>
+                <option value="all">Todos</option>
+            </select>
+        </div>
+        <p class="question">¿recomendarias esta pagina a conocidos?</p>
+        <div class="form-group">
+            <input type="radio" name="user-recommend" class="input-radio" value="definitely" checked> <label for="user-recommend" class="radio-label">definitivamente</label>
+        </div>
+        <div class="form-group">
+            <input type="radio" name="user-recommend" class="input-radio" value="maybe"> <label for="user-recommend" class="radio-label">Quizas</label>
+        </div>
+        <div class="form-group">
+            <input type="radio" name="user-recommend" class="input-radio" value="never"> <label for="user-recommend" class="radio-label">Nunca</label>
+        </div>
+        <p class="question">¿Que te gustaria encontrar mas en la pagina?</p>
+        <div class="form-checkboxs">
+            <label for="user-expectation"  class="checkbox-label">
+            <input name="user-expectation" type="checkbox" value="more-games" class="input-checkbox"> Mas juegos
+        </label>   
+        <label for="user-expectation" class="checkbox-label">  
+            <input name="user-expectation" class="input-checkbox" type="checkbox" value="more-music"> Mas musica
+        </label>    
+        <label for="user-expectation" class="checkbox-label">
+            <input name="user-expectation" class="input-checkbox" type="checkbox" value="more-blogs"> Mas blogs
+        </label> 
+        <label for="user-expectation" class="checkbox-label">
+            <input name="user-expectation" class="input-checkbox" type="checkbox" value="more-guies"> Mas guias
+        </label>
+        <label for="user-expectation" class="checkbox-label">
+            <input name="user-expectation" class="input-checkbox" type="checkbox" value="more-videos"> Mas videos
+        </label>
+        <label for="user-expectation" class="checkbox-label">
+            <input name="user-expectation" class="input-checkbox" type="checkbox" value="more-workshop"> Workshop
+        </label>
+        <label for="user-expectation" class="checkbox-label">
+            <input name="user-expectation" class="input-checkbox" type="checkbox" value="more-stream"> Mas streams
+        </label>
+        <label for="user-expectation" class="checkbox-label">
+            <input name="user-expectation" class="input-checkbox" type="checkbox" value="more-wiki"> Mas Wikis
+        </label>
+        <label for="user-expectation" class="checkbox-label">
+            <input name="user-expectation" class="input-checkbox" type="checkbox" value="more-forum"> Mas foros
+        </label>
+        <label for="user-expectation" class="checkbox-label">
+            <input name="user-expectation" class="input-checkbox" type="checkbox" value="more-courses"> Mas cursos
+        </label>
+        </div>
+        <p class="question">¿Alguna sugeriancia para mejorar?</p>
+        <div class="form-group">
+            <textarea name="comments" id="comentarios" cols="30" rows="10" class="input-textarea" placeholder="Enter your comment here..."></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" id="submit" class="input-submit">
+        </div>    
+    </form>
+    <!--FINAL DEL FORM-->
+</div>
+</body>
+</html>
